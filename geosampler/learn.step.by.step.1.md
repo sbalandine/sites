@@ -12,28 +12,26 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
 ---
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
-source(here::here('vignettes/setup.R'), local = TRUE)
-```
+
 
 > A step-by-step tutorial to do a random sampling by roof identification followed
 
 Before starting you need to check the following:
 
-- you have access to `r pkg_infos$title` (online or offline with a capsule)
+- you have access to GeoSampler (online or offline with a capsule)
 - you have a modern smartphone with [OsmAnd](https://osmand.net/) and/or a GPS device (i.e. Garmin *eTrex*)
 
 # Overview
 
-This method consists in combining the analysis of a satellite image for the identification of shelters (roofs), followed by a random selection of a sample. This has been allowed by the `r pkg_infos$title` app.
+This method consists in combining the analysis of a satellite image for the identification of shelters (roofs), followed by a random selection of a sample. This has been allowed by the GeoSampler app.
 
 This is done in 4 steps:
 
-1. **Delimit**: Using the `r pkg_infos$title` app, you will define a polygone corresponding to the area of interest
+1. **Delimit**: Using the GeoSampler app, you will define a polygone corresponding to the area of interest
 
 2. **Identify**: After, you will scan a recent satellite image and manually click on each roof which seems to be a residential building. In the polygon of interest, this should end up in an "exhaustive" ensemble of roofs
 
-3. **Sample**: From this ensemble, `r pkg_infos$title` can randomly generate a sample of the desired size, and this random sample of GPS coordinates can then be exported to a GPS device for field data collection in each of the household living under the sampled roofs
+3. **Sample**: From this ensemble, GeoSampler can randomly generate a sample of the desired size, and this random sample of GPS coordinates can then be exported to a GPS device for field data collection in each of the household living under the sampled roofs
 
 4. **Plan**: At the office, plan your survey work with the generated sample
 
@@ -41,9 +39,9 @@ This is done in 4 steps:
 
 > How to do a random sample of Masai Lodge
 
-## Open `r pkg_infos$title`
+## Open GeoSampler
 
-1. **Launch** `r pkg_infos$title` which has been installed on your computer.
+1. **Launch** GeoSampler which has been installed on your computer.
 
     Two options:
 
@@ -51,7 +49,7 @@ This is done in 4 steps:
 
       ![](./images/launcher.png)<br><br>
 
-    * Use the **launch.bat** file in the `r pkg_infos$title` folder root.
+    * Use the **launch.bat** file in the GeoSampler folder root.
 
       ![](./images/folders.png)<br><br>
 
@@ -59,7 +57,7 @@ This is done in 4 steps:
 
     ![](./images/dos.png)<br><br>
 
-3. Choose `r pkg_infos$title` (1 [ENTER]). After a few seconds, `r pkg_infos$title` is displayed in your browser. Select **Random Sample**.
+3. Choose GeoSampler (1 [ENTER]). After a few seconds, GeoSampler is displayed in your browser. Select **Random Sample**.
 
     ![](./images/overview-start.webp)
 
@@ -88,7 +86,7 @@ There are 2 options :
 
 **A. Find the Masai Lodge**
 
-1. Click on the button **Search** (`r epi.icons::icon_mdi('magnify')`) on the bottom-left. You can now type a location.<br>
+1. Click on the button **Search** (`<i class="mdi mdi-magnify " role="presentation" aria-label="magnify icon"></i>`{=html}) on the bottom-left. You can now type a location.<br>
 ![](./images/search-1.webp) >> ![](./images/search-2.webp)
 
 2. Type in "Masai Lodge". You find two proposals.<br>
@@ -103,7 +101,7 @@ There are 2 options :
 
 1. Use the mouse to place the Masai Lodge in the centre of the app window
 
-2. Click on the button **Draw a polygon** (`r epi.icons::icon_mdi('shape-square-plus')`).
+2. Click on the button **Draw a polygon** (`<i class="mdi mdi-shape-square-plus " role="presentation" aria-label="shape-square-plus icon"></i>`{=html}).
 
 3. Click on the map to draw the polygon
     - Move the pointer to the image and left-click on the image just outside the refugee camp to mark the first vertex of the polygon
@@ -114,13 +112,13 @@ There are 2 options :
 
 4. Click on the polygon to select it.
 
-5. Click on the button **Save** (`r epi.icons::icon_mdi('check-bold')`). Confirm with **OK**.
+5. Click on the button **Save** (`<i class="mdi mdi-check-bold " role="presentation" aria-label="check-bold icon"></i>`{=html}). Confirm with **OK**.
 
 6. Now, you can go to the next step **Identify**
 
 ### Uploading an existing polygone
 
-1. Click on the button **Add a polygon layer...** (`r epi.icons::icon_mdi('layers-plus')`). This dialog box popup.<br>
+1. Click on the button **Add a polygon layer...** (`<i class="mdi mdi-layers-plus " role="presentation" aria-label="layers-plus icon"></i>`{=html}). This dialog box popup.<br>
 ![](./images/upload-delimit-1.webp)
 
 2. Click on the button **Upload...** and in the file dialog, navigate in your folders and select the appropriate file ([masai-lodge.kmz](./data/psp/2022.nairobi/masai-lodge.kmz)).<br>
@@ -130,11 +128,11 @@ There are 2 options :
 
 4. Click on the polygon to select it.
 
-5. Click on the button **Save** (`r epi.icons::icon_mdi('check-bold')`). Confirm with **OK**.
+5. Click on the button **Save** (`<i class="mdi mdi-check-bold " role="presentation" aria-label="check-bold icon"></i>`{=html}). Confirm with **OK**.
 
 6. Now, you can go to the next step **Identify**
 
-[As in the other method above, do not forget to validate `r epi.icons::icon_mdi('check-bold')` to be able to proceed to step 2 (tab "Identify")  !]{.red-text}
+[As in the other method above, do not forget to validate `<i class="mdi mdi-check-bold " role="presentation" aria-label="check-bold icon"></i>`{=html} to be able to proceed to step 2 (tab "Identify")  !]{.red-text}
 
 ## Step 2: Identify
 
@@ -142,7 +140,7 @@ In this step, the objective is to inspect the satellite and mark shelters by cli
 
 ![](./images/page_identify.webp)
 
-The polygon has been divided into "tiles" by the `r pkg_infos$title` app (these are virtual squares of 150m side ) with a white, semi-transparent border.  For each tile, use the following procedure :
+The polygon has been divided into "tiles" by the GeoSampler app (these are virtual squares of 150m side ) with a white, semi-transparent border.  For each tile, use the following procedure :
 
 ::: {.alert .alert-info}
 **Rules for roof identification**
@@ -160,7 +158,7 @@ Before proceeding further, please read these rules so that you can apply them.
 
 1. To inspect a tile, you can:
 
-    * Click on the button **Search and identify** (`r epi.icons::icon_mdi('feature-search-outline')`).
+    * Click on the button **Search and identify** (`<i class="mdi mdi-feature-search-outline " role="presentation" aria-label="feature-search-outline icon"></i>`{=html}).
     * Click on the map inside the polygon.
     * Use the arrows keys<br>
 
@@ -172,7 +170,7 @@ Before proceeding further, please read these rules so that you can apply them.
 
 3. When all roofs have been marked in a tile, you can
 
-      * Click on the button **Check** (`r epi.icons::icon_mdi('square-rounded', color = "yellow")`).
+      * Click on the button **Check** (`<i class="mdi mdi-square-rounded " style="color: yellow" role="presentation" aria-label="square-rounded icon"></i>`{=html}).
       * Type [**SPACE**]
 
     ![](./images/identify.webp)
@@ -181,13 +179,13 @@ Before proceeding further, please read these rules so that you can apply them.
 
 4. For each tile, continue the same way ...
 
-5. When all tiles of the polygone have been done : click on the button **Valid All** (`r epi.icons::icon_mdi('checkbox-multiple-marked')`) to validate the pointing of roofs.
+5. When all tiles of the polygone have been done : click on the button **Valid All** (`<i class="mdi mdi-checkbox-multiple-marked " role="presentation" aria-label="checkbox-multiple-marked icon"></i>`{=html}) to validate the pointing of roofs.
 
 ::: {.alert .alert-info}
 **Notes**:
 
 * In case of mistakes : re-clicking on a roof allows to remove it.
-* It is possible to change the size and color of marks by clicking the button **Settings** (`r epi.icons::icon_mdi('cog')`).
+* It is possible to change the size and color of marks by clicking the button **Settings** (`<i class="mdi mdi-cog " role="presentation" aria-label="cog icon"></i>`{=html}).
 * For the next tile, if some contiguous shelters  were already pointed previously, their point is highlighted so that the user does not identify (click on it) again.
 :::
 
@@ -201,7 +199,7 @@ In this page, you will randomly select a sample of waypoints from the ensemble o
 
 1. Select the polygon to sample
 
-2. Click the button **New Sample...** (`r epi.icons::icon_mdi('map-marker-multiple-outline')`). The dialog box **Sample Settings** opens.
+2. Click the button **New Sample...** (`<i class="mdi mdi-map-marker-multiple-outline " role="presentation" aria-label="map-marker-multiple-outline icon"></i>`{=html}). The dialog box **Sample Settings** opens.
 
     ![](./images/generate_RS.webp)
 
@@ -209,7 +207,7 @@ In this page, you will randomly select a sample of waypoints from the ensemble o
 
 4. Close the dialog box.
 
-5. Click on the button **Save** (`r epi.icons::icon_mdi('check-bold')`). Confirm with **OK**.
+5. Click on the button **Save** (`<i class="mdi mdi-check-bold " role="presentation" aria-label="check-bold icon"></i>`{=html}). Confirm with **OK**.
 
 6. Now, you can go to the last step **Result**
 
@@ -219,7 +217,7 @@ In this page, you will randomly select a sample of waypoints from the ensemble o
 The precision of the estimate will be increased by increasing the sample size : as much as the sampling units (here, the households) are numerous in the sample, the precision will increase. Outside of these exercises where we do not have enough time to go for a big sample, in real situation, a sample size that would allow sufficient accuracy would rather be around 300-400 households.
 :::
 
-[To be allowed to proceed to the next step, after points have been randomly sampled (by any of the two methods above), click on the icon `r epi.icons::icon_mdi('check-bold')` ]{.red-text}
+[To be allowed to proceed to the next step, after points have been randomly sampled (by any of the two methods above), click on the icon `<i class="mdi mdi-check-bold " role="presentation" aria-label="check-bold icon"></i>`{=html} ]{.red-text}
 
 These sampled points (and coordinates) will be exported in the next section (tab "Results").
 
@@ -232,11 +230,11 @@ These sampled points (and coordinates) will be exported in the next section (tab
 1. Select the polygon. You can also observe that the table of results appears in the right window.
 ![](./images/table_data_rs.webp)
 
-2. Export the file of sampled points from `r pkg_infos$title`:
+2. Export the file of sampled points from GeoSampler:
 
     **Offline** with a GPS  device (Garmin _eTrex_):
 
-    1. Click on the button **GPX** (`r epi.icons::icon_mdi('download')`) and save the file in your computer's disk.
+    1. Click on the button **GPX** (`<i class="mdi mdi-download " role="presentation" aria-label="download icon"></i>`{=html}) and save the file in your computer's disk.
     2. Connect the GPS device to the computer with the adapted USB cable. The GPS device should appear an an accessory/peripheric of the computer in the file explorer of the computer.
     3. Using Windows Explorer (file explorer) ago to the roots of the computer ( C: or D:) and open the _Garmin eTrex_ folder, up to the   .../GPX/... folder.
     4. Copy and paste the .gpx from the hard disk to the folder .../GPX/... folder in  _Garmin eTrex_
@@ -244,14 +242,14 @@ These sampled points (and coordinates) will be exported in the next section (tab
 
     **Online** with a smartphone without camera:
 
-    1. Click on the button **GPX** (`r epi.icons::icon_mdi('download')`) and save the file in your computer's disk.
+    1. Click on the button **GPX** (`<i class="mdi mdi-download " role="presentation" aria-label="download icon"></i>`{=html}) and save the file in your computer's disk.
     2. Sent the **.gpx** file from the computer to an email address which can be accessed from the smarphone.
     3. Open the e-mail app in the smartphone and download the file.
     4. Go to the downloads folder of the smartphone and share the **.gpx** file with Osmand app.
 
     **Online** with a smartphone with camera:
 
-    1. Click on the button **GPX** (`r epi.icons::icon_mdi('qrcode-scan')`). A window opens with a QR code
+    1. Click on the button **GPX** (`<i class="mdi mdi-qrcode-scan " role="presentation" aria-label="qrcode-scan icon"></i>`{=html}). A window opens with a QR code
     2. Scan this QR code with the smartphone and accept the download.
     3. Go to the downloads folder of the smartphone and share the **.gpx** file with Osmand app.
 
